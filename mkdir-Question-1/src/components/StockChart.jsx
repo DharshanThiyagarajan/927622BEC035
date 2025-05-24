@@ -7,7 +7,7 @@ const StockChart = () => {
   const [selectedStock, setSelectedStock] = useState('');
 
   useEffect(() => {
-    axios.get('http://20.244.56.144/evaluation-service/stocks')
+    axios.get('http://20.244.56.144/evaluation-service/stocks/NVDA')
       .then(res => {
         setStocks(res.data.stocks);
         setSelectedStock(Object.values(res.data.stocks)[0]);
